@@ -99,6 +99,17 @@
                 </div>
 
             </header>
+            <section class="filter-section">
+
+    <select id="regionFilter">
+        <option value="All">All Regions</option>
+    </select>
+
+    <select id="categoryFilter">
+        <option value="All">All Categories</option>
+    </select>
+
+</section>
 
             <!-- =========================
                  KPI CARDS
@@ -107,25 +118,25 @@
 
                 <div class="kpi-card">
                     <h3>Total Sales</h3>
-                    <h2>$125,430</h2>
+                    <h2 id="totalSales">$0</h2>
                     <p>+12.5% this month</p>
                 </div>
 
                 <div class="kpi-card">
                     <h3>Total Profit</h3>
-                    <h2>$32,890</h2>
+                    <h2 id="totalProfit">$0</h2>
                     <p>+8.2% this month</p>
                 </div>
 
                 <div class="kpi-card">
                     <h3>Total Orders</h3>
-                    <h2>2,450</h2>
+                    <h2 id="totalOrders">0</h2>
                     <p>+5.1% this month</p>
                 </div>
 
                 <div class="kpi-card">
                     <h3>Customers</h3>
-                    <h2>1,280</h2>
+                    <h2 id="totalCustomers">0</h2>
                     <p>+3.4% this month</p>
                 </div>
 
@@ -182,6 +193,8 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+
+<script src="js/filters.js"></script>
 
 <script src="js/charts.js"></script>
 

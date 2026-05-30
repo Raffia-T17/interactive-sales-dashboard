@@ -18,7 +18,8 @@ Papa.parse("data/sales.csv", {
 
         console.log("Sales Data Loaded:", salesData);
 
-        initializeDashboard();
+       populateFilters();
+       initializeDashboard();
     }
 
 });

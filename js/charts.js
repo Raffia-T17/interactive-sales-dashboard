@@ -73,6 +73,43 @@ window.initializeDashboard = function () {
         }
 
     });
+    /* =========================
+   KPI CALCULATIONS
+========================= */
+
+const totalSales = salesData.reduce(
+    (sum, item) => sum + (parseFloat(item.Sales) || 0),
+    0
+);
+
+const totalProfit = salesData.reduce(
+    (sum, item) => sum + (parseFloat(item.Profit) || 0),
+    0
+);
+
+const totalOrders = salesData.length;
+
+const uniqueCustomers = new Set(
+    salesData.map(item => item["Customer ID"])
+);
+
+const totalCustomers = uniqueCustomers.size;
+
+/* =========================
+   UPDATE KPI CARDS
+========================= */
+
+document.getElementById("totalSales").textContent =
+    "$" + totalSales.toLocaleString();
+
+document.getElementById("totalProfit").textContent =
+    "$" + totalProfit.toLocaleString();
+
+document.getElementById("totalOrders").textContent =
+    totalOrders.toLocaleString();
+
+document.getElementById("totalCustomers").textContent =
+    totalCustomers.toLocaleString();
 
     /* =========================
        SALES OVERVIEW CHART
